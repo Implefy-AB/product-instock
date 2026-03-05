@@ -23,10 +23,8 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_kanban_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//kanban" position="inside">
-                <field name="is_in_stock"/>
-            </xpath>
-            <xpath expr="//div[hasclass('oe_kanban_details')]" position="inside">
+            <xpath expr="//templates//t[@t-name='card']" position="inside">
+                <field name="is_in_stock" invisible="1"/>
                 <div class="badge text-bg-success mt-1"
                      invisible="not is_in_stock">
                     I lager
