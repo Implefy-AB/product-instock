@@ -3,9 +3,9 @@
 
     <!-- "I lager" badge on website product page -->
     <template id="product_instock_badge"
-              inherit_id="website_sale.product"
+              inherit_id="website_sale.product_title"
               name="Product In Stock Badge">
-        <xpath expr="//div[@id='product_details']//h1" position="after">
+        <xpath expr="//h1[@t-field='product.name']" position="after">
             <t t-if="product.qty_available &gt; 0">
                 <span class="badge text-bg-success mb-2 d-inline-block">I lager</span>
             </t>
