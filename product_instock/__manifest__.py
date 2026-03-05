@@ -10,9 +10,10 @@
     'author': 'Implefy AB',
     'website': 'https://github.com/Implefy-AB/product-instock',
     'license': 'LGPL-3',
-    'depends': ['stock', 'product'],
+    'depends': ['website_sale', 'stock'],
     'data': [
         'views/product_template_views.xml',
+        'views/website_sale_templates.xml',
     ],
     'installable': True,
     'auto_install': False,

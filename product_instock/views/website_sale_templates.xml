@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- "I lager" badge on website product page -->
+    <template id="product_instock_badge"
+              inherit_id="website_sale.product"
+              name="Product In Stock Badge">
+        <xpath expr="//h1[@t-field='product.name']" position="after">
+            <t t-if="product.qty_available &gt; 0">
+                <span class="badge text-bg-success ms-2">I lager</span>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
