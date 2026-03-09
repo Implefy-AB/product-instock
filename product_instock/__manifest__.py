@@ -16,7 +16,6 @@
     ],
     'assets': {
         'web.assets_frontend': [
-            'product_instock/static/src/interactions/product_page.js',
             'product_instock/static/src/xml/product_instock.xml',
         ],
     },
