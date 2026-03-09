@@ -5,7 +5,7 @@
        t-inherit="website_sale_stock.product_availability"
        t-inherit-mode="extension">
         <xpath expr="//div[@id='threshold_message']" position="after">
-            <div t-elif="free_qty &gt; 0 and !allow_out_of_stock_order"
+            <div t-if="free_qty &gt; 0"
                  t-attf-class="availability_message_#{product_template} my-3">
                 <span class="badge text-bg-success">
                     <i class="fa fa-circle me-2 text-success"/>I lager
