@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="product_instock.in_stock_badge">
+        <div t-att-class="'availability_message_' + product_template"
+             t-if="is_storable and free_qty > 0 and !allow_out_of_stock_order">
+            <span class="badge text-bg-success">
+                <i class="fa fa-circle me-2 text-success"/>I lager
+            </span>
+        </div>
+    </t>
+
+</templates>
