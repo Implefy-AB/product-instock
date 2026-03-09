@@ -1,6 +1,6 @@
 import { patch } from "@web/core/utils/patch";
 import { renderToFragment } from "@web/core/utils/render";
-import { ProductPage } from "@website_sale_stock/interactions/product_page";
+import { ProductPage } from "@website_sale/interactions/product_page";
 
 patch(ProductPage.prototype, {
     async _onChangeCombination(ev, parent, combination) {
@@ -10,7 +10,7 @@ patch(ProductPage.prototype, {
             return;
         }
 
-        // Remove any existing "I lager" badges for this template
+        // Remove any existing "I lager" badges
         const container = this.el.querySelector("div.availability_messages");
         if (!container) {
             return;
@@ -25,7 +25,6 @@ patch(ProductPage.prototype, {
                 "product_instock.in_stock_badge",
                 combination
             );
-            // Wrap in a container we can find later
             const wrapper = document.createElement("div");
             wrapper.classList.add("product_instock_badge");
             wrapper.append(fragment);

@@ -13,6 +13,7 @@
     'depends': ['website_sale_stock'],
     'data': [
         'views/product_template_views.xml',
+        'views/website_sale_templates.xml',
     ],
     'assets': {
         'web.assets_frontend': [
