@@ -9,7 +9,7 @@
     """,
     'author': 'Implefy AB',
     'website': 'https://github.com/Implefy-AB/product-instock',
-    'license': 'LGPL-3',
+    'license': 'OPL-1',
     'depends': ['website_sale_stock'],
     'data': [
         'views/product_template_views.xml',
